@@ -40,7 +40,7 @@ app.get('/math/power/:base/:exponent', (req, res) => {
 
   // check if is numeric
   if (!isNumeric(base) || !isNumeric(exponent)) {
-    res.json({
+    res.status(400).json({
       "error": "Invalid input"
     });
   }
